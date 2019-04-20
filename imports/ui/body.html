@@ -7,20 +7,14 @@
       <form class="new-task">
         <input type="text" name="text" placeholder="Type to add new tasks" />
       </form>
-  
     </header>
 
     <ul>
       <!-- iterating over tasks array -->
       {{#each tasks}}
       <!-- inserting task template for each value -->
-        {{> task}}
+      {{> task}}
       {{/each}}
     </ul>
   </div>
 </body>
-
-<template name="task">
-  <!-- display text property of array item -->
-  <li>{{text}}</li>
-</template>
