@@ -1,0 +1,20 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>My Todo List</h1>
+    </header>
+
+    <ul>
+      <!-- iterating over tasks array -->
+      {{#each tasks}}
+      <!-- inserting task template for each value -->
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="task">
+  <!-- display text property of array item -->
+  <li>{{text}}</li>
+</template>
