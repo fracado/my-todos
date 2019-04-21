@@ -8,8 +8,10 @@ import './task.js';
 import './body.html';
 
 // callback function to store state
+// and to subscribe to task publication on body template creation
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
+  Meteor.subscribe('tasks');
 });
 
 // defined 'tasks' helper to return tasks from collection

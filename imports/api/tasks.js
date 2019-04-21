@@ -5,6 +5,14 @@ import { check } from 'meteor/check';
 // exports Mongo Collection for tasks:
 export const Tasks = new Mongo.Collection('tasks');
 
+if (Meteor.isServer) {
+  // This code only runs on the server
+  // send tasks from server to client-side database
+  Meteor.publish('tasks', function tasksPublication() {
+    return Tasks.find();
+  });
+}
+
 // methods for client operations:
 Meteor.methods({
   'tasks.insert'(text) {
