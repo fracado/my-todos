@@ -1,7 +1,13 @@
 <body>
   <div class="container">
     <header>
-      <h1>My Todo List</h1>
+      <h1>My Todo List ({{incompleteCount}})</h1>
+
+      <!-- checkbox to hide completed tasks -->
+      <label class="hide-completed">
+        <input type="checkbox" />
+        Hide Completed Tasks
+      </label>
 
       <!-- Form to ADD NEW TASK -->
       <form class="new-task">
