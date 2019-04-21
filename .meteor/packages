@@ -24,3 +24,5 @@ accounts-facebook
 facebook-config-ui
 accounts-google
 google-config-ui
+practicalmeteor:mocha
+meteortesting:mocha
