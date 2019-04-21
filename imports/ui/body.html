@@ -11,10 +11,12 @@
 
       {{> loginButtons}}
 
-      <!-- Form to ADD NEW TASK -->
+      <!-- Form to ADD NEW TASK, only logged in user-->
+      {{#if currentUser}}
       <form class="new-task">
         <input type="text" name="text" placeholder="Type to add new tasks" />
       </form>
+      {{/if}}
     </header>
 
     <ul>
