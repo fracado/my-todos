@@ -124,6 +124,11 @@ header .hide-completed {
   color: white;
 }
 
+.edit-task input {
+    background: transparent;
+    border: none;
+}
+
 @media (max-width: 600px) {
   li {
     padding: 12px 15px;

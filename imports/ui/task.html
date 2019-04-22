@@ -2,22 +2,22 @@
   <!-- adds class "checked" to checked off items: -->
   <!-- and private class to private tasks: -->
   <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
-    <button class="delete">&times;</button>
-
-    <input type="checkbox" checked="{{ checked }}" class="toggle-checked" />
-
-    {{#if isOwner}}
-    <button class="toggle-private">
-      {{#if private}}
-      Private
-      {{else}}
-      Public
-      {{/if}}
-    </button>
-    {{/if}}
-
     <form class="edit-task">
-      <span class="text"><strong>{{ username }}</strong> - <input type="text" name="text" value="{{ text }}" /></span>
+      <button class="delete">&times;</button>
+
+      <input type="checkbox" checked="{{ checked }}" class="toggle-checked" />
+
+      {{#if isOwner}}
+      <button class="toggle-private">
+        {{#if private}}
+        Private
+        {{else}}
+        Public
+        {{/if}}
+      </button>
+      {{/if}}
+      
+      <strong>{{ username }}</strong> - <input type="text" name="text" value="{{ text }}" />
     </form>
   </li>
 </template>

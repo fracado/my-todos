@@ -22,13 +22,13 @@ Template.task.events({
   'click .toggle-private'() {
     Meteor.call('tasks.setPrivate', this._id, !this.private);
   },
-  'submit .edit-task'(e) {
-    e.preventDefault()
+  'submit .edit-task'(event) {
+    event.preventDefault()
     // Get value from form element
     const target = event.target;
     const text = target.text.value;
-    console.log(text)
-    // Insert a task into the collection
+
+    // Update task in the collection
     Meteor.call('tasks.update', this._id, text);
   }
 });
