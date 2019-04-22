@@ -16,8 +16,8 @@
     </button>
     {{/if}}
 
-    <span class="text"
-      ><strong>{{ username }}</strong> - {{ text }}</span
-    >
+    <form class="edit-task">
+      <span class="text"><strong>{{ username }}</strong> - <input type="text" name="text" value="{{ text }}" /></span>
+    </form>
   </li>
 </template>

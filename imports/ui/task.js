@@ -7,7 +7,7 @@ import './task.html';
 Template.task.helpers({
   isOwner() {
     return this.owner === Meteor.userId();
-  },
+  }
 });
 
 // add event handlers for task list buttons:
@@ -22,4 +22,13 @@ Template.task.events({
   'click .toggle-private'() {
     Meteor.call('tasks.setPrivate', this._id, !this.private);
   },
+  'submit .edit-task'(e) {
+    e.preventDefault()
+    // Get value from form element
+    const target = event.target;
+    const text = target.text.value;
+    console.log(text)
+    // Insert a task into the collection
+    Meteor.call('tasks.update', this._id, text);
+  }
 });

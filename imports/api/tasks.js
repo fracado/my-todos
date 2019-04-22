@@ -60,7 +60,19 @@ Meteor.methods({
 
       Tasks.update(taskId, { $set: { checked: setChecked } });
   },
-  // define method to set tasks to private
+  // update task text
+  'tasks.update'(taskId, text) {
+    check(text, String);
+    const task = Tasks.findOne(taskId);
+    if (task.private && task.owner !== Meteor.userId()) {
+      // If the task is private, make sure only the owner can update text
+      throw new Meteor.Error('not-authorized');
+    }
+    if (task.owner === Meteor.userId())
+      // only task owner can update text
+      Tasks.update(taskId, { $set: { text } });
+  },
+  // sets tasks to private
   'tasks.setPrivate'(taskId, setToPrivate) {
     check(taskId, String);
     check(setToPrivate, Boolean);
