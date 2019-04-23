@@ -1,7 +1,7 @@
 body {
   font-family: 'Lucida Console', sans-serif;
-  background-color: #318169;
-  background-image: linear-gradient(to bottom, #318169, #859182 100%);
+  background-color: #318181;
+  background-image: linear-gradient(to bottom, #318181, #859182 100%);
   background-attachment: fixed;
 
   position: absolute;
@@ -13,7 +13,7 @@ body {
   padding: 0;
   margin: 0;
 
-  font-size: 14px;
+  font-size: 1.5em;
 }
 
 .container {
@@ -52,7 +52,7 @@ form {
   box-sizing: border-box;
   padding: 10px 0;
   background: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
+  border-radius: 8px;
   border: none;
   width: 100%;
   padding-left: 10px;
@@ -125,6 +125,7 @@ header .hide-completed {
 .toggle-private {
   margin-left: 5px;
   margin-right: 10px;
+  font-size: 11px;
   border: 2px solid black;
   background-color: white;
   border-color: rgb(18, 173, 160);
