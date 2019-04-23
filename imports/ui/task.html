@@ -3,8 +3,7 @@
   <!-- and private class to private tasks: -->
   <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
     <form class="edit-task">
-      <button class="delete">&times;</button>
-
+      
       <input type="checkbox" checked="{{ checked }}" class="toggle-checked" />
 
       {{#if isOwner}}
@@ -12,12 +11,15 @@
         {{#if private}}
         Private
         {{else}}
-        Public
+        &nbsp;Public&nbsp;
         {{/if}}
       </button>
       {{/if}}
       
       <strong>{{ username }}</strong> - <input type="text" name="text" value="{{ text }}" />
     </form>
+
+    <button class="delete">&times;</button>
+
   </li>
 </template>
