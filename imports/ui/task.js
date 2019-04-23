@@ -30,5 +30,8 @@ Template.task.events({
 
     // Update task in the collection
     Meteor.call('tasks.update', this._id, text);
+
+    //display success message
+    FlashMessages.sendSuccess("The task was updated successfully!");
   }
 });

@@ -26,3 +26,4 @@ accounts-google
 google-config-ui
 practicalmeteor:mocha
 meteortesting:mocha
+mrt:flash-messages
